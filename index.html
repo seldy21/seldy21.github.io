@@ -7,14 +7,27 @@
     <link rel="stylesheet" href="common/css/fonts.css">
     <link rel="stylesheet" href="common/css/normalize.css">
     <link rel="stylesheet" href="common/css/index.css">
+
+    <script src="common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="common/js/index.js"></script>
 </head>
 <body>
     <header>
-        <h1><a href="#">솜이의 TIL <span>(Today I Learned!)</span></a></h1>
+        <h1>
+            <div class="menuBar">메뉴</div>
+            <a href="#">솜이의 TIL <span>(Today I Learned!)</span></a>
+        </h1>
     </header>
     <aside>
-        <ul>
-            <li><a href="220413/index.html">기술블로그 만들기</a></li>
+        <ul class="sideMenu">
+            <li class="sideContents">
+                <div class="contTtle">
+                    <span>git</span>
+                    <div class="arrowDown arrowDown1"></div></div>
+                <ul class="downItems downItems1">
+                    <li><a href="220413/index.html">기술블로그 만들기</a></li>
+                </ul>
+            </li>
         </ul>
     </aside>
     <main>
