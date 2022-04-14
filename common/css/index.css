@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 body{font-family: 'pretendard';}
-header{background-color: #ffe253; position: fixed;width: 100%; height: 100px; display: flex; align-items: center; padding-left:50px ; z-index: 10; }
-h1{display: flex; font-family: 'BinggraeSamanco'; font-size: 30px;}
+header{background-color: #ffe253; position: fixed;width: 100%; height: 80px; display: flex; align-items: center; padding-left:20px ; z-index: 10; }
+h1{display: flex; font-family: 'BinggraeSamanco'; font-size: 20px;}
 h1 .menuBar{width: 32px; height: 32px; text-indent: -9999px; background: url(../images/menu_black_24dp.svg) no-repeat 50% / contain;}
 h1 a{margin-left: 10px;}
-header span{font-size: 22px;}
+header span{font-size: 16px;}
 ul{margin: 0; padding: 0;}
 ul li{list-style: none;}
 ol{margin:40px auto;}
@@ -15,7 +15,7 @@ img{width: 70vw;}
 ::-webkit-scrollbar{width: 10px;}
 ::-webkit-scrollbar-track{background-color: rgb(159, 203, 251);}
 ::-webkit-scrollbar-thumb{background-color: #fff; border:1px solid rgb(153, 153, 153); border-radius: 10px;}
-aside{display:none;box-sizing:border-box;background-color:#1c86ff;margin-top:100px; position: fixed;height: 100%; width: 100vw; overflow: scroll;}
+aside{display:none;box-sizing:border-box;background-color:#1c86ff;margin-top:80px; position: fixed;height: 100%; width: 100vw; overflow: scroll;}
 aside .sideMenu{ margin-top:20px; flex-direction: column;}
 aside .sideMenu .sideContents{width: 90%; margin:10px auto;}
 aside .sideMenu .sideContents .contTtle{display: flex; font-size: 25px;}
@@ -24,11 +24,11 @@ aside .sideMenu .arrowDown.rotate{transform: rotate(180deg);}
 aside .sideMenu .downItems{display: none; padding:20px 10px;}
 /*aside .sideMenu .downItems.show{height:auto; padding:20px 10px;}*/
 
-main{padding-top:100px; height: calc(100vh - 130px);font-size: 16px;} 
+main{padding-top:80px; height: calc(100vh - 130px);font-size: 16px;} 
 main section{margin:15px;} 
 main .expln{line-height: 1.5;} 
 main .title p{text-align: right; font-size: 13px; color: #888;}
-main .indexExpln{margin:70px;}
+main .indexExpln{margin:50px; word-break: keep-all;}
 footer{padding-left:15vw;text-align: center; height: 30px;}
 
 @media screen and (min-width:768px){
@@ -41,15 +41,19 @@ footer{padding-left:15vw;text-align: center; height: 30px;}
     aside .sideMenu .arrowDown{width:20px; height:20px;}
     aside .downItems li a{transition: .5s; font-size: 14px; word-break: keep-all;}
     main {padding-left: 18vw; padding-bottom:50px;  font-size: 14px;}
-    main h2{margin-top:70px;}
+    main h2{margin-top:40px;}
     main section{margin:50px;}
     
 }
 
 @media screen and (min-width:1290px) {
-    main {font-size: 16px;}
+    header{height:100px; padding-left:70px;}
+    header h1{font-size: 25px;}
+
     aside .sideMenu .sideContents {padding: 10px 40px;}
     aside .sideMenu .arrowDown{cursor: pointer; }
     aside .downItems li a{font-size: 16px;}
     aside .downItems li:hover a{color: #fff;}
+    
+    main {font-size: 16px; padding-top:100px;}
 }
