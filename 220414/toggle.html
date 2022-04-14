@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>toggle</title>
+    <link rel="stylesheet" href="../common/css/fonts.css">
+    <link rel="stylesheet" href="../common/css/normalize.css">
+    <link rel="stylesheet" href="../common/css/index.css">
+    <link rel="stylesheet" href="css/toggle.css">
+
+    <script src="../common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="../common/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <div class="menuBar">메뉴</div>
+            <a href="../index.html">솜이의 TIL <span>(Today I Learned!)</span>🥰</a>
+        </h1>
+    </header>
+    <aside>
+        <ul class="sideMenu">
+            <li class="sideContents sideContents3">
+                <div class="contTtle">
+                    <span>ES6</span>
+                    <div class="arrowDown arrowDown3"></div>
+                </div>
+                <ul class="downItems downItems3">
+                    <li><a href="#">toggle</a></li>
+                </ul>
+            </li>
+            <li class="sideContents sideContents2">
+                <div class="contTtle">
+                    <span>react</span>
+                    <div class="arrowDown arrowDown2"></div>
+                </div>
+                <ul class="downItems downItems2">
+                    <li><a href="reactStart.html">리액트를 시작하며</a></li>
+                </ul>
+            </li>
+            <li class="sideContents sideContents4">
+                <div class="contTtle">
+                    <span>CSS</span>
+                    <div class="arrowDown arrowDown4"></div>
+                </div>
+                <ul class="downItems downItems4">
+                    <li><a href="../220414/fontello.html">fontello 아이콘 연결하기</a></li>
+                </ul>
+            </li>
+            <li class="sideContents sideContents1">
+                <div class="contTtle">
+                    <span>git</span>
+                    <div class="arrowDown arrowDown1"></div>
+                </div>
+                <ul class="downItems downItems1">
+                    <li><a href="../220413/gitblog.html">기술블로그 만들기</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <section>
+            <div class="title">
+                <h2>toggle</h2>
+                <p>2022-04-14</p>
+            </div>
+            <div class="expln">
+                <p>
+                    toggle. on/off의 기능을 한번에 적용할 수 있는 메서드이다. 해당 블로그를 개설하고 자잘한 효과를 설정하면서 이 toggle 매서드 덕을 보았다.
+                </p>
+                <p>
+                    스크립트에 에러가 계속 뜨다가 어찌어찌 에러없이 실행 될 때는 너무 기쁘다.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>우당탕탕 toggle 적용하기</h3>
+            <ol class="expln">
+                <li>toggle 적용을 하나만 하는 경우
+                    <ul>
+                        <li>
+                            <img src="images/toggle1.png" alt="toggle코딩">
+                        </li>
+                        <li>
+                            아래를 향해 있는 화살표를 클릭하면 화살표가 180도로 돌아서 위를 향하게 하고 싶었다.
+                        </li>
+                        <li>
+                            움직임의 값은 .5초로 설정하고, rotate라는 클래스를 css에 만들어 놓았다.
+                        </li>
+                        <li>
+                            querySelector로 arrowDown 클래스를 찾아서 상수로 변환한 다음, 클릭하면 rotate클래스를 붙이고 뗄 수 있게 했다.
+                        </li>
+                        <li>고마운 toggle. add와 remove 따로 작성할 필요가 없다.</li>
+                        <li>그런데...</li>
+                    </ul>
+                </li>
+                <li>toggle 적용을 하는 배열이 있는 경우
+                    <ul>
+                        <li>
+                            <img src="images/toggle2.png" alt="toggle코딩">
+                        </li>
+                        <li>
+                            만약에 화살표가 여러개라면 1번의 방법으로 스크립트를 짜게 되면 제일 처음 나타나는 화살표에만 rotate 클래스가 적용된다.
+                        </li>
+                        <li>
+                            그래서 배열의 값으로 적용을 해 주어야 하는데, 그 때 필요한 것이 querySelectorAll
+                        </li>
+                        <li>
+                            배열의 값이기 때문에 forEach구문을 사용하였다. 이렇게 하면 완성!
+                        </li>
+                    </ul>
+                </li>
+                <li><span>아직 해결 못했다..</span>
+                    <ul>
+                        <li>
+                            <img src="images/toggle3.png" alt="toggle코딩">
+                        </li>
+                        <li>
+                            화살표를 클릭하면 아래로 하위 콘텐츠가 나왔으면 좋겠는데 어떻게 해야 할 지 잘 모르겠어서 일단은 각각 클래스명을 다르게 하여 jQuery로 작성하였다.
+                        </li>
+                        <li>
+                            위에서 아래로 내려오는 움직임을 주기 위해 slideToggle을 사용.
+                        </li>
+                        <li>
+                            분명 자바스크립트로 한번에 할 수 있을텐데.. 나중에 꼭 찾아봐야지
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        som's techblog
+    </footer>
+</body>
+</html>

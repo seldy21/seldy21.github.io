@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+main{height: auto;}
+main .expln span{color: #888; font-style: italic;}
+main ol{list-style: none;}
+main .expln li span{color:rgb(255, 154, 39); font-style: normal; font-weight: bold;}
+
+footer{text-align: center; height: 30px;}
+
+@media screen and (min-width:768px){
+
+    aside .sideMenu .downItems.downItems2{display: flex; color: aliceblue;}
+    aside .sideMenu .arrowDown2{background: url(../../common/images/close_black_24dp.svg) no-repeat 50% / contain ;}
+}
