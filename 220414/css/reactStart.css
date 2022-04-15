@@ -9,6 +9,7 @@ footer{text-align: center; height: 30px;}
 
 @media screen and (min-width:768px){
 
-    aside .sideMenu .downItems.downItems2{display: flex; color: aliceblue;}
+    aside .sideMenu .downItems.downItems2{display: flex; flex-direction: column;}
+    aside .sideMenu .downItems.downItems2 li:nth-child(1){color: aliceblue;}
     aside .sideMenu .arrowDown2{background: url(../../common/images/close_black_24dp.svg) no-repeat 50% / contain ;}
 }

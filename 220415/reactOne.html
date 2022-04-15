@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <title>정다솜의 기술블로그 - fontello 아이콘 연결하기</title>
+    <title>정다솜의 기술블로그 - 리액트 설치하기</title>
     <link rel="stylesheet" href="../common/css/fonts.css">
     <link rel="stylesheet" href="../common/css/normalize.css">
     <link rel="stylesheet" href="../common/images/fontello-13d12694/css/fontello.css">
     <link rel="stylesheet" href="../common/css/index.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/reactOne.css">
 
     <script src="../common/js/jquery-3.6.0.min.js"></script>
     <script defer src="../common/js/index.js"></script>
@@ -30,7 +30,7 @@
                     <div class="arrowDown arrowDown3"></div>
                 </div>
                 <ul class="downItems downItems3">
-                    <li><a href="toggle.html">toggle</a></li>
+                    <li><a href="../220414/toggle.html">toggle</a></li>
                 </ul>
             </li>
             <li class="sideContents sideContents2">
@@ -39,8 +39,8 @@
                     <div class="arrowDown arrowDown2"></div>
                 </div>
                 <ul class="downItems downItems2">
-                    <li><a href="reactStart.html">리액트를 시작하며</a></li>
-                    <li><a href="../220415/reactOne.html">리액트 설치하기</a></li>
+                    <li><a href="../220414/reactStart.html">리액트를 시작하며</a></li>
+                    <li><a href="#">리액트 설치하기</a></li>
                 </ul>
             </li>
             <li class="sideContents sideContents4">
@@ -49,7 +49,7 @@
                     <div class="arrowDown arrowDown4"></div>
                 </div>
                 <ul class="downItems downItems4">
-                    <li><a href="#">fontello 아이콘 연결하기</a></li>
+                    <li><a href="../220414/fontello.html">fontello 아이콘 연결하기</a></li>
                 </ul>
             </li>
             <li class="sideContents sideContents1">
@@ -66,38 +66,47 @@
     <main>
         <section>
             <div class="title">
-                <h2>fontello 아이콘 연결하기</h2>
-                <p>2022-04-14</p>
+                <h2>react 설치하기</h2>
+                <p>2022-04-15</p>
             </div>
             <div class="expln">
                 <p>
-                    fontello 아이콘은 사용하기 매우 쉽고 편하다. 원하는 아이콘만 다운받아 코드로 사용하면 된다. 약간의 꾸밈으로 전체적인 분위기를 아기자기하게 만들 수 있기에 아이콘의 역할은 중요하다.
+                    react를 다루기 위해 프로그램 설치는 필수. 이를 위해서는 node.js 파일을 꼭 설치해야 한다.
                 </p>
             </div>
         </section>
         <section>
-            <h3>fontello 사용하기<i class="icon-emo-thumbsup"></i></h3>
+            <h3>자, react에 발을 한 번 담가보자.</h3>
             <ol class="expln">
-                <li>fontello 사이트로 접속 <a href="https://fontello.com/" target="_blank">https://fontello.com/</a>해서 원하는 아이콘을 클릭
+                <li>vs code를 열고 새로운 폴더를 연다. 폴더명은 'react'를 피하도록 하는 것이 좋다. 그래서 reactApp으로 만들어서 명령어<div class="box"><span>npx</span> create-react-app .</div>입력 했는데</li>
+                <li>
                     <ul>
-                        <li><img src="images/fontello1.png" alt="fontello 다운로드"></li>
-                    </ul>
-                </li>
-                <li>오른쪽 상단 빨간색 버튼 Download webfont 클릭
-                </li>
-                <li>다운로드 후 압축풀기</li>
-                <li>생성된 파일 내 css 폴더에서 fontello.css 문서를 연결하고자 하는 html 문서에 link로 연결</li>
-                <li>폴더 내에서 demo.html 파일을 열면 각 아이콘의 클래스명을 확인할 수 있다.
-                    <ul>
-                        <li><img src="images/fontello2.png" alt="fontello 데모 이미지"></li>
+                        <li>게 뭐람...</li>
+                        <li><img src="images/react1.png" alt="react 터미널"></li>
+                        <li><span>응~ 에러</span></li>
+                        <li>그래도 찬찬히 읽어보니 폴더명에 대문자 쓰지 말라는 느낌적인 느낌인 듯.</li>
+                        <li> 코딩하다 보니 camelCase가 편하게 느껴져서 자주 쓰게 된다.</li>
+                        <li>넵 프로젝트명을 바꾸겠습니다.</li>
                     </ul>
                 </li>
                 <li>
-                    삽입하고자 하는 위치에 i 태그를 써서 사용한다.
                     <ul>
-                        <li>
-                            <img src="images/fontello3.png" alt="fontello 사용 태그">
-                        </li>
+                        <li>얌전히 폴더명 react-app으로 새로 만들었다.</li>
+                        <li><img src="images/react2.jpg" alt="react 터미널"></li>
+                        <li>잘 진행되고 있는 중이다.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>모든 과정이 끝나면 success가 뜬다.</li>
+                        <li><img src="images/react3.jpg" alt="react 터미널"></li>
+                        <li>파란색으로 보이는 npm start, npm run build 등은 사용 가능한 명령어라고 한다. 그렇다면 npm start를 입력해본다.</li>
+                    </ul> 
+                </li>
+                <li>
+                    <ul>
+                        <li>웹 브라우저로 샘플 react app이 실행된다. 혹시 3000번 port가 이미 사용중이라면 다른 메시지가 뜨는데, y를 입력하면 자동으로 다른 port로 실행된다.</li>
+                        <li><img src="images/react4.jpg" alt="react 터미널"></li>
                     </ul>
                 </li>
         </section>

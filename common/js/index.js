@@ -2,21 +2,21 @@ $('.menuBar').on('click',()=>{
     $('aside').slideToggle();
 });
 
-$('.arrowDown1').on('click',()=>{
-    $('.downItems1').slideToggle();
-});
+$('.arrowDown1').on('click',(function(){
+    $('.downItems1').slideToggle(300);
+}));
 
-$('.arrowDown2').on('click',()=>{
-    $('.downItems2').slideToggle();
-});
+$('.arrowDown2').on('click',(function(){
+    $('.downItems2').slideToggle(300);
+}));
 
-$('.arrowDown3').on('click',()=>{
-    $('.downItems3').slideToggle();
-});
+$('.arrowDown3').on('click',(function(){
+    $('.downItems3').slideToggle(300);
+}));
 
-$('.arrowDown4').on('click',()=>{
-    $('.downItems4').slideToggle();
-});
+$('.arrowDown4').on('click',(function(){
+    $('.downItems4').slideToggle(300);
+}));
 
 const arrow=document.querySelectorAll('.arrowDown');
 arrow.forEach(function(btns){
