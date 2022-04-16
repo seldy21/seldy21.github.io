@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+main{height: auto;}
+main .expln {list-style: none;}
+main .expln li .box{background: rgb(255, 225, 249);padding:10px; box-sizing: border-box; width: 60vw;}
+main .expln li span{color:#777; font-style: italic;}
+
+@media screen and (min-width:768px){
+
+    aside .sideMenu .downItems.downItems2{display: flex; flex-direction: column;}
+    aside .sideMenu .downItems.downItems2 li:nth-child(4){color: aliceblue;}
+    aside .sideMenu .arrowDown3{background: url(../../common/images/close_black_24dp.svg) no-repeat 50% / contain ;}
+
+    
+    main .expln li .box{width:60vw;}
+}
+
+@media screen and (min-width:1290px) {
+    main .expln li .box{width:30vw;}
+    
+}

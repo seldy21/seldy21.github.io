@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,7 +9,7 @@
     <meta property="og:url" content="https://seldy21.github.io">
     <meta property="og:image" content="">
     <meta property="og:description" content="오늘 배운 것을 정리하는 정다솜의 기술블로그입니다.">
-    <title>정다솜의 기술블로그 - 기술블로그 만들기</title>
+    <title>정다솜의 기술블로그 - 사용자정의태그 component</title>
 
     <link rel="shortcut icon" href="../common/images/favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../common/images/favicon/favicon.svg" type="image/svg+xml">
@@ -19,8 +20,9 @@
 
     <link rel="stylesheet" href="../common/css/fonts.css">
     <link rel="stylesheet" href="../common/css/normalize.css">
+    <link rel="stylesheet" href="../common/images/fontello-13d12694/css/fontello.css">
     <link rel="stylesheet" href="../common/css/index.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reactThree.css">
 
     <script src="../common/js/jquery-3.6.0.min.js"></script>
     <script defer src="../common/js/index.js"></script>
@@ -51,8 +53,8 @@
                 <ul class="downItems downItems2">
                     <li><a href="../220414/reactStart.html">리액트를 시작하며</a></li>
                     <li><a href="../220415/reactOne.html">리액트 설치하기</a></li>
-                    <li><a href="../220416/reactTwo.html">리액트 수정·배포</a></li>
-                    <li><a href="../220416/reactThree.html">사용자정의태그 component</a></li>
+                    <li><a href="reactTwo.html">리액트 수정·배포</a></li>
+                    <li><a href="#">사용자정의태그 component</a></li>
                 </ul>
             </li>
             <li class="sideContents sideContents4">
@@ -70,7 +72,7 @@
                     <div class="arrowDown arrowDown1"></div>
                 </div>
                 <ul class="downItems downItems1">
-                    <li><a href="#">기술블로그 만들기</a></li>
+                    <li><a href="../220413/gitblog.html">기술블로그 만들기</a></li>
                 </ul>
             </li>
             <li class="sideContents sideContents5">
@@ -79,7 +81,7 @@
                     <div class="arrowDown arrowDown5"></div>
                 </div>
                 <ul class="downItems downItems5">
-                    <li><a href="../220416/siteURL.html">유용한 사이트</a></li>
+                    <li><a href="siteURL.html">유용한 사이트</a></li>
                 </ul>
             </li>
         </ul>
@@ -87,37 +89,34 @@
     <main>
         <section>
             <div class="title">
-                <h2>기술블로그 만들기</h2>
-                <p>2022-04-13</p>
+                <h2>사용자 정의 태그</h2>
+                <p>2022-04-16</p>
             </div>
             <div class="expln">
                 <p>
-                    기술 블로그를 시작했다. 하루하루 배우는 것들을 기록하기 위함인데, 지금 나의 목표는 꾸준히, '즐겁게!' 
+                    리액트는 사용자 정의 태그를 만드는 기술이다. 쉽게 말해 복잡하고 반복되는 태그를 사용자가 지정한 방식의 새로운 태그로 만들어 사용하게 하는 것이다.
                 </p>
-                <p>
-                    '기본'은 가장 단순하지만 실전으로 지키기는 어려운 법이다.
-                </p>
+                <p>그런데, 어떻게?</p>
             </div>
         </section>
         <section>
-            <h3>github로 블로그 만들기</h3>
+            <h3>함수를 정의해서 만든다.</h3>
             <ol class="expln">
-                <li>github로 repository 생성</li>
-                <li><span>username</span>.github.io로 주소 설정 (ADD a README file 체크)</li>
-                <li>repository 생성 후 초록색 버튼 Code를 눌러 주소 복사</li>
-                <li>commit할 폴더를 디바이스에 생성하거나 열고 마우스 오른쪽 버튼 누르고 git bash here 클릭</li>
-                <li>clone 생성 명령어 입력 
-                    <div class="box">git clone <span>복사한 주소</span></div>
+                <li>
+                    예를 들어, 평범한 HTML을 작성하는 경우 아래와 같은 방식을 사용한다.
+                    <ul>
+                        <li><img src="images/react8.jpg" alt="리액트 코딩"></li>
+                        <li>src 폴더의 App.js로 작성한 화면. header와 main, footer로 구성된 HTML의 코드 작성을 따랐다.</li>
+                    </ul>
                 </li>
-                <li>clone한 폴더로 이동 후 파일 생성 명령어 입력
-                    <div class="box">cd <span>username</span>.github.io<br>echo "Hello World" > index.html</div>
+                여기서, react를 이용하여 함수를 정의하여 작성해 보자.
+                    <ul>
+                        <li><img src="images/react9.jpg" alt="리액트 코딩"></li>
+                        <li>함수를 정의할 때는 <strong>첫 글자를 꼭 대문자로 작성하여야</strong> 한다. <span>(아마도 이것 때문에 프로젝트명에는 대문자를 사용할수 없었던 것 같다...)</span></li>
+                    </ul>
+                <li>
+                    이러한 사용자 정의 태그를 리액트에서는 컴포넌트(component)라고 부른다.
                 </li>
-                <li>push 명령어 입력
-                    <div class="box">git add --all<br>git commit -m "<span>추가할 메시지</span>"</div>
-                </li>
-                <li>주소창에 <span>username</span>.github.ico 입력</li>
-                <li>꾸밈의 값은 html과 css로 적용하여 완성</li>
-            </ol>
         </section>
     </main>
     <footer>
