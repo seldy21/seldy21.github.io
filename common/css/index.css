@@ -32,6 +32,8 @@ main .expln ul li{margin:10px 0;}
 main .title p{text-align: right; font-size: 13px; color: #888;}
 main .indexExpln{margin:50px; word-break: keep-all;}
 footer {text-align: center;}
+footer ul li{font-size: 10px; margin:5px 0; }
+footer ul li span{color:#777;}
 
 @media screen and (min-width:768px){
     h1 .menuBar{display: none;}
@@ -58,7 +60,9 @@ footer {text-align: center;}
     aside .sideMenu .sideContents {padding: 10px 40px;}
     aside .sideMenu .arrowDown{cursor: pointer; }
     aside .downItems li a{font-size: 16px;}
-    aside .downItems li:hover a{color: #fff;}
+    aside .downItems li a:hover{color: #fff;}
     
     main {font-size: 16px; padding-top:100px; height: calc(100vh - 180px);}
+
+    footer ul li{font-size: 13px;}
 }

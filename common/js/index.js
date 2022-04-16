@@ -18,6 +18,10 @@ $('.arrowDown4').on('click',(function(){
     $('.downItems4').slideToggle(300);
 }));
 
+$('.arrowDown5').on('click',(function(){
+    $('.downItems5').slideToggle(300);
+}));
+
 const arrow=document.querySelectorAll('.arrowDown');
 arrow.forEach(function(btns){
     btns.addEventListener('click',()=>{
