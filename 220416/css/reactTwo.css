@@ -7,7 +7,7 @@ main .expln li .box{background: rgb(255, 225, 249);padding:10px; box-sizing: bor
 
     aside .sideMenu .downItems.downItems2{display: flex; flex-direction: column;}
     aside .sideMenu .downItems.downItems2 li:nth-child(3){color: aliceblue;}
-    aside .sideMenu .arrowDown3{background: url(../../common/images/close_black_24dp.svg) no-repeat 50% / contain ;}
+    aside .sideMenu .arrowDown2{background: url(../../common/images/close_black_24dp.svg) no-repeat 50% / contain ;}
 
     
     main .expln li .box{width:60vw;}
