@@ -15,7 +15,7 @@ img{width: 70vw;}
 ::-webkit-scrollbar{width: 10px;}
 ::-webkit-scrollbar-track{background-color: rgb(159, 203, 251);}
 ::-webkit-scrollbar-thumb{background-color: #fff; border:1px solid rgb(153, 153, 153); border-radius: 10px;}
-aside{display:none;box-sizing:border-box;background-color:#1c86ff;margin-top:80px; position: fixed;height: 100%; width: 100vw; overflow: scroll;}
+aside{display:none;box-sizing:border-box;background-color:#1c86ff;padding-top:60px; position: fixed;height: 100%; width: 100vw; overflow: scroll;}
 aside .sideMenu{ margin-top:20px; flex-direction: column;}
 aside .sideMenu .sideContents{margin:10px auto;}
 aside .sideMenu .sideContents .contTtle{display: flex; font-size: 25px;}
@@ -38,7 +38,7 @@ footer ul li span{color:#777;}
 @media screen and (min-width:768px){
     h1 .menuBar{display: none;}
     img{width: 60vw;}
-    aside{display:block;width: 18vw;}
+    aside{display:block;width: 18vw; }
     aside .sideMenu {margin-top:50px;}
     aside .sideMenu .sideContents {padding: 10px 10px;}
     aside .sideMenu .sideContents .contTtle{font-size: 16px;}
@@ -57,6 +57,7 @@ footer ul li span{color:#777;}
     header h1{font-size: 25px;}
     img{width: auto;}
 
+    aside{padding-top: 80px;}
     aside .sideMenu .sideContents {padding: 10px 40px;}
     aside .sideMenu .arrowDown{cursor: pointer; }
     aside .downItems li a{font-size: 16px;}
