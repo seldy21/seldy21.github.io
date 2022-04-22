@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta property="og:title" content="솜이의 TIL">
+    <meta property="og:url" content="https://seldy21.github.io">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="오늘 배운 것을 정리하는 정다솜의 기술블로그입니다.">
+    <title>정다솜의 기술블로그 - javascript event</title>
+
+    <link rel="shortcut icon" href="../common/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../common/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../common/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" href="../common/images/favicon/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="../common/images/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="../common/images/favicon/manifest.json">
+
+    <link rel="stylesheet" href="../common/css/fonts.css">
+    <link rel="stylesheet" href="../common/css/normalize.css">
+    <link rel="stylesheet" href="../common/images/fontello-13d12694/css/fontello.css">
+    <link rel="stylesheet" href="../common/css/index.css">
+    <link rel="stylesheet" href="css/onEvent.css">
+
+    <script src="../common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="../common/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="menuBar">메뉴</div>
+        <h1>
+            <a href="/seldy21.github.io/index.html">솜이의 TIL <span>(Today I Learned!)</span>🥰</a>
+        </h1>
+    </header>
+    <aside>
+        <ul class="sideMenu">
+            <li class="sideContents sideContents3">
+                <div class="contTtle">
+                    <span>ES6</span>
+                    <div class="arrowDown arrowDown3"></div>
+                </div>
+                    <ul class="downItems downItems3">
+                        <li><a href="/220414/toggle.html">toggle</a></li>
+                        <li><a href="/220420/onEvent.html">javascript event</a></li>
+                    </ul>
+            </li>
+            <li class="sideContents sideContents2">
+                <div class="contTtle">
+                    <span>react</span>
+                    <div class="arrowDown arrowDown2"></div>
+                </div>
+                <ul class="downItems downItems2">
+                    <li><a href="/220414/reactStart.html">리액트를 시작하며</a></li>
+                    <li><a href="/220415/reactOne.html">리액트 설치하기</a></li>
+                    <li><a href="/220416/reactTwo.html">리액트 수정·배포</a></li>
+                    <li><a href="/220416/reactThree.html">사용자정의태그 component</a></li>
+                    <li><a href="/220417/reactFour.html">속성 PROPS</a></li>
+                    <li><a href="/220418/reactFive.html">이벤트</a></li>
+                    <li><a href="/220419/reactSix.html">useState</a></li>
+                    <li><a href="/220420/reactSeven.html">Create 1</a></li>
+                </ul>
+            </li>
+            <li class="sideContents sideContents4">
+                <div class="contTtle">
+                    <span>CSS</span>
+                    <div class="arrowDown arrowDown4"></div>
+                </div>
+                <ul class="downItems downItems4">
+                    <li><a href="/220414/fontello.html">fontello 아이콘 연결하기</a></li>
+                </ul>
+            </li>
+            <li class="sideContents">
+                <div class="contTtle">
+                    <span>git</span>
+                    <div class="arrowDown arrowDown1"></div></div>
+                <ul class="downItems downItems1">
+                    <li><a href="/220413/gitblog.html">기술블로그 만들기</a></li>
+                </ul>
+            </li>
+            <li class="sideContents sideContents5">
+                <div class="contTtle">
+                    <span>etc.</span>
+                    <div class="arrowDown arrowDown5"></div>
+                </div>
+                <ul class="downItems downItems5">
+                    <li><a href="/220416/siteURL.html">유용한 사이트</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <section>
+            <div class="title">
+                <h2>javascript event</h2>
+                <p>2022-04-20</p>
+            </div>
+            <div class="expln">
+                <p>
+                    이벤트 : 브라우저 상에서 상태를 바꾸는 특정 행위. 
+                </p>
+                <p>
+                    이벤트 핸들러 : 이벤트가 발생했을 때 그에 대한 반응. 이벤트에 'on'을 붙여 동작을 처리한다.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>이벤트 종류</h3>
+            <ol class="expln">
+                <li>
+                    마우스이벤트
+                    <table>
+                        <tr>
+                            <th>click </th>
+                            <td>마우스 클릭 시</td>
+                        </tr>
+                        <tr>
+                            <th>dbclick</th>
+                            <td>마우스 더블클릭 시</td>
+                        </tr>
+                        <tr>
+                            <th>mousedown</th>
+                            <td>클릭하고 있을 때</td>
+                        </tr>
+                        <tr>
+                            <th>mouseup</th>
+                            <td>클릭이 떼어졌을 때</td>
+                        </tr>
+                        <tr>
+                            <th>mousemove</th>
+                            <td>마우스 움직이고 있을 시</td>
+                        </tr>
+                        <tr>
+                            <th>mouseover</th>
+                            <td>마우스가 요소 위에 있을 때. (하위 노드에 영향 있음)</td>
+                        </tr>
+                        <tr>
+                            <th>mouseenter</th>
+                            <td>마우스가 요소 위에 있을 때. (하위 노드에 영향 없음)</td>
+                        </tr>
+                        <tr>
+                            <th>mouseout</th>
+                            <td>마우스가 요소를 벗어났을 때. (하위 노드에 영향 있음)</td>
+                        </tr>
+                        <tr>
+                            <th>mouseleave</th>
+                            <td>마우스가 요소 위에 있을 때. (하위 노드에 영향 없음)</td>
+                        </tr>
+                        <tr>
+                            <th>contextmenu</th>
+                            <td>마우스 오른쪽 버튼을 눌렀을 때</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    키 이벤트
+                    <table>
+                        <tr>
+                            <th>keydown</th>
+                            <td>키를 누를 시</td>
+                        </tr>
+                        <tr>
+                            <th>keyup</th>
+                            <td>키를 떼었을 시</td>
+                        </tr>
+                        <tr>
+                            <th>keypress</th>
+                            <td>키를 누른 상태일 시</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    폼 이벤트
+                    <table>
+                        <tr>
+                            <th>focus</th>
+                            <td>요소에 포커스가 놓였을 시</td>
+                        </tr>
+                        <tr>
+                            <th>blur</th>
+                            <td>요소에서 포커스가 벗어났을 시</td>
+                        </tr>
+                        <tr>
+                            <th>change</th>
+                            <td>요소의 값이 변경되었을 시</td>
+                        </tr>
+                        <tr>
+                            <th>submit</th>
+                            <td>submit 버튼을 눌렀을 시</td>
+                        </tr>
+                        <tr>
+                            <th>reset</th>
+                            <td>reset 버튼을 눌렀을 시</td>
+                        </tr>
+                        <tr>
+                            <th>select</th>
+                            <td>input이나 textarea 요소 안의 텍스트를 드래그하여 선택했을 시</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    로드 및 기타 이벤트
+                    <table>
+                        <tr>
+                            <th>load</th>
+                            <td>페이지의 로딩이 완료되었을 시</td>
+                        </tr>
+                        <tr>
+                            <th>abort</th>
+                            <td>이미지의 로딩이 중단되었을 시</td>
+                        </tr>
+                        <tr>
+                            <th>unload</th>
+                            <td>페이지가 다른 곳으로 이동되었을 시</td>
+                        </tr>
+                        <tr>
+                            <th>resize</th>
+                            <td>요소의 사이즈가 변경되었을 시</td>
+                        </tr>
+                        <tr>
+                            <th>scroll</th>
+                            <td>스크롤바를 움직였을 시</td>
+                        </tr>
+                    </table>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>som's techblog</li>
+        </ul>
+    </footer>
+</body>
+</html>
