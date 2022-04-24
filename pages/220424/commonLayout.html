@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta property="og:title" content="솜이의 TIL">
+    <meta property="og:url" content="https://seldy21.github.io">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="오늘 배운 것을 정리하는 정다솜의 기술블로그입니다.">
+    <title>공통 레이아웃 만들기 - 정다솜의 기술블로그</title>
+
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/common/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" href="/common/images/favicon/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="/common/images/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/common/images/favicon/manifest.json">
+
+    <link rel="stylesheet" href="/common/css/fonts.css">
+    <link rel="stylesheet" href="/common/css/normalize.css">
+    <link rel="stylesheet" href="/common/images/fontello-13d12694/css/fontello.css">
+    <link rel="stylesheet" href="/common/css/index.css">
+    <link rel="stylesheet" href="css/commonLayout.css">
+
+    <script src="/common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="/common/js/index.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <main>
+        <section>
+            <div class="title">
+                <h2>공통 레이아웃 만들기</h2>
+                <p>2022-04-24</p>
+            </div>
+        </section>
+        <section>
+            <h3>기술 블로그 처음 만들 때부터 페이지별 공통 레이아웃을 적용하고 싶다는 것이 나의 소소하고 확실한 걸림돌이었다. </h3>
+            <ol class="expln">
+                <li>
+                    원래는 이렇게 긴~~~~ 태그를 모든 페이지마다 적용했다.
+                    <ul>
+                        <li><img src="images/layout1.jpg" alt="페이지 레이아웃 코딩"></li>
+                        <li><span>(이 밑으로도 많음..)</span></li>
+                        <li>header와 aside 내용은 모든 페이지에 똑같이 적용되기 때문에 페이지 하나가 늘어날 때마다 모든 페이지에 추가된 페이지의 url을 작성해야 했다.🤬</li>
+                        <li>이게 한, 두개이면 그냥 복사하기 붙여넣기로 어떻게 비벼보겠는데 포스팅이 늘어갈수록....</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>많다...</strong>
+                    <ul>
+                        <li><img src="images/layout2.jpg" alt="페이지 파일"></li>
+                        <li>각각의 html 파일을 다 열어서 일일히 복사 붙여넣기 하기에는 뭐 아직 아예 불가능한 분량은 아니지만, 하루 이틀 하고 말 작업은 아니기 때문에 레이아웃을 하나로 만들어 적용하는 것이 필요했다. <span>살려줘</span></li>
+                    </ul>
+                </li>
+                <li>
+                    공통 요소가 들어갈 태그를 만들고 id값을 부여하였다.
+                    <ul>
+                        <li><img src="images/layout3.jpg" alt="index 코드"></li>
+                    </ul>
+                </li>
+                <li>
+                    연결된 스크립트 파일에 해당 아이디를 상수로 지정한다.
+                    <ul>
+                        <li><img src="images/layout4.jpg" alt="스크립트 코드"></li>
+                    </ul>
+                </li>
+                <li>
+                    함수를 만들어 `` 안에 공통 적용할 코드 내용을 텍스트로 리턴값에 넣는다.
+                    <ul>
+                        <li><img src="images/layout5.jpg" alt="스크립트 코드"></li>
+                    </ul>
+                </li>
+                <li>
+                    insertAdjacentHTML을 사용해서 닫히는 root태그 전에 함수가 실행되게 한다.
+                    <ul>
+                        <li><img src="images/layout6.jpg" alt="스크립트 코드"></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>기존 작성된 스크립트보다 먼저 작성해야 그것이 제대로 작동한다!</strong> 이렇게 완성 !! 이제는 스크립트 파일만 수정하면 모든 페이지에 동시에 적용된다🤣 YEAH!!!
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>som's techblog</li>
+        </ul>
+    </footer>
+</body>
+</html>

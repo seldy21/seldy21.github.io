@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta property="og:title" content="솜이의 TIL">
+    <meta property="og:url" content="https://seldy21.github.io">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="오늘 배운 것을 정리하는 정다솜의 기술블로그입니다.">
+    <title>기술블로그 만들기 - 정다솜의 기술블로그</title>
+
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/common/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" href="/common/images/favicon/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="/common/images/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/common/images/favicon/manifest.json">
+
+    <link rel="stylesheet" href="/common/css/fonts.css">
+    <link rel="stylesheet" href="/common/css/normalize.css">
+    <link rel="stylesheet" href="/common/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="/common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="/common/js/index.js"></script>
+</head>
+<body>
+    <div id="root">
+    </div>
+    <main>
+        <section>
+            <div class="title">
+                <h2>기술블로그 만들기</h2>
+                <p>2022-04-13</p>
+            </div>
+            <div class="expln">
+                <p>
+                    기술 블로그를 시작했다. 하루하루 배우는 것들을 기록하기 위함인데, 지금 나의 목표는 꾸준히, '즐겁게!' 
+                </p>
+                <p>
+                    '기본'은 가장 단순하지만 실전으로 지키기는 어려운 법이다.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>github로 블로그 만들기</h3>
+            <ol class="expln">
+                <li>github로 repository 생성</li>
+                <li><span>username</span>.github.io로 주소 설정 (ADD a README file 체크)</li>
+                <li>repository 생성 후 초록색 버튼 Code를 눌러 주소 복사</li>
+                <li>commit할 폴더를 디바이스에 생성하거나 열고 마우스 오른쪽 버튼 누르고 git bash here 클릭</li>
+                <li>clone 생성 명령어 입력 
+                    <div class="box">git clone <span>복사한 주소</span></div>
+                </li>
+                <li>clone한 폴더로 이동 후 파일 생성 명령어 입력
+                    <div class="box">cd <span>username</span>.github.io<br>echo "Hello World" > index.html</div>
+                </li>
+                <li>push 명령어 입력
+                    <div class="box">git add --all<br>git commit -m "<span>추가할 메시지</span>"</div>
+                </li>
+                <li>주소창에 <span>username</span>.github.ico 입력</li>
+                <li>꾸밈의 값은 html과 css로 적용하여 완성</li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>som's techblog</li>
+        </ul>
+    </footer>
+</body>
+</html>

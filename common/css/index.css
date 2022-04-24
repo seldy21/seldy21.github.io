@@ -37,7 +37,7 @@ footer ul li span{color:#777;}
 
 @media screen and (min-width:768px){
     .menuBar{display: none;}
-    img{width: 60vw;}
+    img{width: 40vw;}
     aside{display:block;width: 18vw; }
     aside .sideMenu {margin-top:50px;}
     aside .sideMenu .sideContents {padding: 10px 10px;}
@@ -47,6 +47,7 @@ footer ul li span{color:#777;}
     main {padding-left: 18vw;padding-bottom:30px; font-size: 14px;  height: calc(100vh - 160px);}
     main h2{margin-top:40px;}
     main section{margin:50px;}
+    main .expln li{word-break: keep-all;}
     
     footer{padding-left:15vw;text-align: center; height: 30px;}
     
@@ -64,6 +65,7 @@ footer ul li span{color:#777;}
     aside .downItems li a:hover{color: #fff;}
     
     main {font-size: 16px; padding-top:100px; height: calc(100vh - 180px);}
+    main .expln li{width: 90%;}
 
     footer ul li{font-size: 13px;}
 }

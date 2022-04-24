@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta property="og:title" content="솜이의 TIL">
+    <meta property="og:url" content="https://seldy21.github.io">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="오늘 배운 것을 정리하는 정다솜의 기술블로그입니다.">
+    <title>리액트 수정·배포 - 정다솜의 기술블로그</title>
+
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/common/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" href="/common/images/favicon/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="/common/images/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/common/images/favicon/manifest.json">
+
+    <link rel="stylesheet" href="/common/css/fonts.css">
+    <link rel="stylesheet" href="/common/css/normalize.css">
+    <link rel="stylesheet" href="/common/images/fontello-13d12694/css/fontello.css">
+    <link rel="stylesheet" href="/common/css/index.css">
+    <link rel="stylesheet" href="css/reactTwo.css">
+
+    <script src="/common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="/common/js/index.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <main>
+        <section>
+            <div class="title">
+                <h2>react 수정·배포</h2>
+                <p>2022-04-16</p>
+            </div>
+            <!--<div class="expln">
+                <p>
+                    
+                </p>
+            </div>-->
+        </section>
+        <section>
+            <h3>react 수정하는 방법</h3>
+            <ol class="expln">
+                <li>
+                    src 폴더에 있는 index.js 파일은 react 앱의 입구가 되는 파일이다.
+                    <ul>
+                        <li><img src="images/react1.jpg" alt="리액트 코딩"></li>
+                        <li>10번 줄에 있는 &lt;App /&gt; 태그는 샘플 react 브라우저를 구성하고 있는 태그. 이 태그는 4번 줄에 있는 App에서 가져온 것이다.</li>
+                        <li>4번 줄은 App이 ./App 에서 가져온 것이라는 뜻이다. ./App 에서 . 은 같은 폴더안에 존재한다는 뜻이고, App 파일명 뒤에는 .js 확장자가 생략되었다.</li>
+                    </ul>
+                </li>
+                <li>
+                    App.js 파일로 들어가면 아래와 같은 화면이 뜨는데, 선택된 부분을 지우고 수정이 가능하다.
+                    <ul>
+                        <li><img src="images/react2.jpg" alt="리액트 코딩"></li>
+                        <li><img src="images/react3.jpg" alt="리액트 코딩"></li>
+                        <li>수정된 화면.</li>
+                    </ul>
+                </li>
+                <li>
+                    화면을 꾸미기 위해서는 App.css 파일을 이용한다.
+                    <ul>
+                        <li><img src="images/react4.jpg" alt="리액트 코딩"></li>
+                        <li>.App 태그에 작성한 color, background-color, padding이 적용되었다.</li>
+                    </ul>
+                </li>
+                <li>
+                    App.js 파일 내 7~12번 줄은 App 이라는 태그를 id 값이 root인 태그로 렌더링 하라는 뜻.
+                    <ul>
+                        <li><img src="images/react6.jpg" alt="리액트 코딩"></li>
+                        <li>이 root id 는 public 폴더의 index.html 파일에서 확인할 수 있다.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h3>react를 배포하자</h3>
+            <ol class="expln">
+                <li>react 샘플은 '개발'을 위한 애플리케이션으로, 배포하기에는 적합하지 않다. 터미널을 열고 <div class="box">npm run build</div>명령어를 입력한다. 이는 배포판을 만드는 명령어로, build 라는 폴더를 생성한다.</li>
+                <li>
+                    빌드한 결과를 서비스하는 경우 'serve'라는 앱을 사용한다. serve는 웹 서버로, 해당 웹 서버의 옵션 중 -s(마이너스 에스) 옵션을 부여하면 사용자가 어떤 경로로 진입하든 index.html 파일을 서비스한다. <div class="box">npx serve -s build</div> 명령어를 터미널에 입력하면 build 폴더에 있는 index.html을 서비스하는 웹 서버를 실행하게 된다.
+                </li>
+                <li>완료!
+                    <ul>
+                        <li><img src="images/react7.jpg" alt="리액트 코딩"></li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>som's techblog</li>
+        </ul>
+    </footer>
+</body>
+</html>
