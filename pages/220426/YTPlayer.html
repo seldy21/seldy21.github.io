@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta property="og:title" content="솜이의 TIL">
+    <meta property="og:url" content="https://seldy21.github.io">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="오늘 배운 것을 정리하는 정다솜의 기술블로그입니다.">
+    <title>YTPlayer 제어 - 정다솜의 기술블로그</title>
+
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/common/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/common/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" href="/common/images/favicon/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="/common/images/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/common/images/favicon/manifest.json">
+
+    <link rel="stylesheet" href="/common/css/fonts.css">
+    <link rel="stylesheet" href="/common/css/normalize.css">
+    <link rel="stylesheet" href="/common/images/fontello-13d12694/css/fontello.css">
+    <link rel="stylesheet" href="/common/css/index.css">
+    <link rel="stylesheet" href="css/YTPlayer.css">
+
+    <script src="/common/js/jquery-3.6.0.min.js"></script>
+    <script defer src="/common/js/index.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <main>
+        <section>
+            <div class="title">
+                <h2>YTPlayer 제어</h2>
+                <p>2022-04-26</p>
+            </div>
+        </section>
+        <section>
+            <h3>YTPlayer의 video width 값을 제어하기</h3>
+            <ol class="expln">
+                <li>포트폴리오에 유튜브 영상을 삽입하면서 가로크기를 제어하고 싶었다. 유튜브 영상 삽입은 YTPlayer 스크립트를 인용하여 사용했다.</li>
+                <li>width 값이 태그에 직접적으로 설정되어 있는 것을 확인하였다.
+                    <ul>
+                        <li><img src="images/elle2.jpg" alt="개발자 도구"></li>
+                        <li>inline-YTPlayer라는 클래스값은 내가 준 게 아니기 때문에 스크립트에서 만들어 지정한 것이었다.</li>
+                    </ul>
+                </li>
+                <li>이 클래스 안에 지정된 기본적 크기가 있기 때문에 아무리 css 파일로 width 값을 변경해도 전혀 변경되지 않았다.
+                    <ul>
+                        <li><img src="images/elle3.jpg" alt="개발자 도구"></li>
+                        <li><img src="images/elle4.jpg" alt="개발자 도구"></li>
+                    </ul>
+                </li>
+                <li>그러므로 스크립트 파일을 열어 클래스 값을 검색한다.
+                    <ul>
+                        <li><img src="images/elle6.jpg" alt="YTPlayer script"></li>
+                        <li><span>찾았다 요놈!</span></li>
+                        <li>이 부분 때문에 max-width값이 설정되어 있었던 것이다.</li>
+                    </ul>
+                </li>
+                <li>이 부분을 지우고, 새 이름으로 저장한다.
+                    <ul>
+                        <li><img src="images/elle8.jpg" alt="YTPlayer script"></li>
+                        <li>이제는 css파일로 width값을 제어할 수 있다!</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>som's techblog</li>
+        </ul>
+    </footer>
+</body>
+</html>

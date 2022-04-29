@@ -1,12 +1,26 @@
 @charset "utf-8";
 
-main{height: auto;}
-main .expln li a{text-decoration: underline;}
+main {
+  height: auto;
+}
+main .expln li a {
+  text-decoration: underline;
+}
 
-footer{text-align: center; height: 30px;}
+footer {
+  text-align: center;
+  height: 30px;
+}
 
-@media screen and (min-width:768px){
-
-    aside .sideMenu .downItems.downItems4{display: flex; color: aliceblue;}
-    aside .sideMenu .arrowDown4{background: url(/common/images/close_black_24dp.svg) no-repeat 50% / contain ;}
+@media screen and (min-width: 768px) {
+  aside .sideMenu .downItems.downItems4 {
+    display: flex;
+    flex-direction: column;
+  }
+  aside .sideMenu .downItems.downItems4 li:nth-child(1) {
+    color: aliceblue;
+  }
+  aside .sideMenu .arrowDown4 {
+    background: url(/common/images/close_black_24dp.svg) no-repeat 50% / contain;
+  }
 }

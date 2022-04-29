@@ -18,6 +18,8 @@ function common(){
                             <li><a href="/pages/220414/toggle.html">toggle</a></li>
                             <li><a href="/pages/220420/onEvent.html">javascript event</a></li>
                             <li><a href="/pages/220424/commonLayout.html">공통 레이아웃 만들기</a></li>
+                            <li><a href="/pages/220426/YTPlayer.html">YTPlayer 제어</a></li>
+                            <li><a href="/pages/220429/class.html">class 문법</a></li>
                         </ul>
                 </li>
                 <li class="sideContents sideContents2">
